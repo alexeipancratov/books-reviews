@@ -1,5 +1,6 @@
 import "./App.css";
 import BooksList from "./components/BooksList";
+import BookDetails from "./components/BookDetails";
 import { Switch, Route } from "react-router-dom";
 
 function App() {
@@ -8,8 +9,8 @@ function App() {
       <div className="row">
         <div className="col-md">
           <Switch>
-            <Route path="/" component={BooksList} />
-            <Route path="/books/:id" element={<h1>Book Details</h1>} />
+            <Route path="/" component={BooksList} exact/>
+            <Route path="/books/:id" component={BookDetails} />
           </Switch>
         </div>
       </div>

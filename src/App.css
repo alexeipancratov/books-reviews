@@ -2,3 +2,15 @@
   max-width: 250px;
   max-height: 400px;
 }
+.review-box{
+  border:2px #797272e8 solid;
+  background-color:beige;
+  border-radius: 3px;
+  margin:10px auto !important;
+  padding: 5px;
+}
+
+#floatingInputfloa{
+  border: 1px black thin;
+  border-radius: 3px;
+}

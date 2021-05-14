@@ -1,19 +1,22 @@
 import "./App.css";
 import BooksList from "./components/BooksList";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md">
-          <Switch>
-            <Route path="/" component={BooksList} />
-            <Route path="/books/:id" element={<h1>Book Details</h1>} />
-          </Switch>
+    <BrowserRouter>
+      <div className="container">
+        <h2 className="text-center">Welcome to Books Reviews</h2>
+        <div className="row">
+          <div className="col-md">
+            <Switch>
+              <Route path="/" component={BooksList} />
+              <Route path="/books/:id" element={<h1>Book Details</h1>} />
+            </Switch>
+          </div>
         </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
